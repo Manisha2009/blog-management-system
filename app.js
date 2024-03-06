@@ -41,10 +41,6 @@ app.locals.isActiveRoute = isActiveRoute;
 
 app.use('/',require('./server/routes/main'));
 app.use('/',require('./server/routes/admin'));
-
-
-connectDB().then(()=>{
-    app.listen(PORT,()=>{
-        console.log(`App is listening on port ${PORT}`);
-    });
-})
+app.listen(PORT,()=>{
+    console.log(`App is listening on port ${PORT}`);
+});
